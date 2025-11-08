@@ -1,0 +1,66 @@
+﻿
+ @{
+    ViewData["Title"] = "Home Page";
+}
+
+<!-- This will override the default layout for this page only -->
+<div class="full-page-background">
+    <div class="content-overlay">
+        <div class="text-center">
+            <h1 class="display-4" style="font-size:70px; font-family:courier; 
+                color:Orange;">Welcome</h1>
+
+            <h1 class="display-2" style="font-size:50px; font-family:verdana;
+                color: White;"> This is Book Store Project</h1>
+
+            <h1 class="display-5" style="font-size:30px; font-family:courier; color: 
+                LightGray">If any kind of Error occurred, Sorry!</h1>
+
+            
+            <div class="mt-4">
+                <a asp-controller="Books" asp-action="Index" class="btn btn-primary btn-lg">
+                    <i class="bi bi-book"></i> View All Books
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .full-page-background {
+        background-image: url('/images/download.jpeg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+
+    .content-overlay {
+        background-color: rgba(0, 0, 0, 0.6);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+    }
+
+    header, footer {
+        display: none;
+    }
+
+    .container {
+        padding: 0;
+        max-width: 100%;
+    }
+</style>
